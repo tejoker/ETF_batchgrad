@@ -16,8 +16,3 @@ Here are the sources for the top 4 world university rankings in CSV format.
 ⚠️ **Manual Export Required**
 - **UniversityRankings.ch**: Go to [ARWU 2024 Results](https://www.universityrankings.ch/results/ARWU/2024) and click "Export CSV" at the bottom of the table.
 - **Kaggle**: [Top Universities Ranking 2024](https://www.kaggle.com/datasets) (Search for "Shanghai Ranking 2024")
-
-## 4. U.S. News Best Global Universities 2024
-❌ **No Direct CSV**
-- **Official Site**: [US News Education](https://www.usnews.com/education/best-global-universities)
-- **Note**: US News does not provide public datasets. You may find scraped versions on Kaggle, but they are often incomplete or focused on US National rankings.

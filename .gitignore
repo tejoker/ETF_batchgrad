@@ -37,6 +37,8 @@ data/
 *.json
 !profile_scraper_json_schema.json
 !package.json
+*.csv
+daur_page.html
 
 # Verifier Output
 verification_report.json
@@ -50,7 +52,7 @@ temp_viewport.png
 # Chrome Debug Profile
 .chrome-debug-profile/
 
-# Test Scripts
+# Test Scripts and Utilities
 test_*.py
 create_dummy_resume.py
 process_resume.py

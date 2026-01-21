@@ -64,7 +64,8 @@ def get_selenium_drivers(running: bool, **kwargs) -> webdriver.Chrome:
         logging.exception(e)
         logging.critical("driver failed to start...")
         logging.critical("Make sure Chrome/Chromium is installed and chromedriver is in the correct location")
-        exit(1)
+        raise RuntimeError("Failed to initialize Selenium driver")
+
 
     logging.debug("waiting for the drivers to start...")
     time.sleep(2)

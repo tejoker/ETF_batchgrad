@@ -4,6 +4,9 @@ from fuzzywuzzy import fuzz
 from ollama_wrapper import OllamaClient
 from GitHubScraper import GitHubScraper
 from verifier.parser import ResumeParser
+from verifier.cross_verifier import CrossVerifier
+from LinkedInScraper import LinkedinScraper
+from scraper import get_selenium_drivers
 import statistics
 import re
 import math
@@ -16,7 +19,22 @@ class Grader:
         self.world_df = pd.read_csv('average_ranking_with_region.csv')
         self.ollama = OllamaClient(model="llama3.2:3b")
         self.use_scraping = use_scraping
+        self.ollama = OllamaClient(model="llama3.2:3b")
+        self.use_scraping = use_scraping
         self.scraped_data_cache = {}
+        self.driver = None
+        if self.use_scraping:
+             try:
+                 # Try to connect to existing debug chrome or start headless
+                 # Using port 9222 as default
+                 self.driver = get_selenium_drivers(running=True, portnumber=9222)
+             except:
+                 print("   [Grader] Could not connect to running Chrome, trying to start new instance...")
+                 try:
+                    self.driver = get_selenium_drivers(running=False, headless=True)
+                 except Exception as e:
+                     print(f"   [Grader] Failed to initialize Selenium: {e}")
+
 
     def _fuzzy_match_school(self, school_name, df, name_col):
         """Find best match for school name in dataframe."""
@@ -141,8 +159,8 @@ class Grader:
         except:
             return {}
             
-        if username in self.scraped_data_cache:
-            return self.scraped_data_cache[username]
+        if f"gh_{username}" in self.scraped_data_cache:
+            return self.scraped_data_cache[f"gh_{username}"]
             
         print(f"   [Scraper] Fetching GitHub data for {username}...")
         try:
@@ -160,10 +178,42 @@ class Grader:
                 "bio": profile.get('bio', ''),
                 "blog": profile.get('blog', '')
             }
-            self.scraped_data_cache[username] = data
+            self.scraped_data_cache[f"gh_{username}"] = data
             return data
         except Exception as e:
-            print(f"   [Scraper] Error: {e}")
+            print(f"   [Scraper] GitHub Error: {e}")
+            return {}
+
+    def _scrape_linkedin(self, linkedin_url):
+        if not self.use_scraping or not self.driver or not isinstance(linkedin_url, str) or "linkedin.com" not in linkedin_url:
+            return {}
+            
+        if linkedin_url in self.scraped_data_cache:
+            return self.scraped_data_cache[linkedin_url]
+            
+        print(f"   [Scraper] Fetching LinkedIn data for {linkedin_url}...")
+        try:
+            driver = self.driver
+            driver.get(linkedin_url)
+            # Basic wait for load
+            import time
+            time.sleep(3)
+            
+            page_source = driver.page_source
+            scraper = LinkedinScraper(page_source, driver, save=False)
+            
+            # Construct simple data dictionary from scraper attributes
+            data = {
+                "education": scraper.education,
+                "experience": scraper.experience,
+                "projects": scraper.projects,
+                "skills": scraper.skills
+            }
+            
+            self.scraped_data_cache[linkedin_url] = data
+            return data
+        except Exception as e:
+            print(f"   [Scraper] LinkedIn Error: {e}")
             return {}
 
     def _parse_resume(self, resume_path):
@@ -196,10 +246,16 @@ class Grader:
             
             # Use raw text (truncated) if structured fails or as supplement?
             # Structured is likely safer for context window
-            return summary
+            # Return both summary and raw structure/text for verification
+            return {
+                "summary": summary,
+                "raw_text": data.get("raw_text", ""),
+                "education": data.get("education", []),
+                "skills": data.get("skills", [])
+            }
         except Exception as e:
             print(f"   [Resume] Error: {e}")
-            return ""
+            return {}
 
     def _get_ollama_grade(self, criteria, prompt_context):
         """Run Ollama 5 times, take average of best 3."""
@@ -298,8 +354,26 @@ class Grader:
                 gh_context += f"- {repo['name']}: {repo.get('description', '')} (Stars: {repo.get('stars')})\n  Analysis: {repo.get('llm_review', 'N/A')}\n"
         
         # Parse Resume
+        # Parse Resume
         resume_path = row.get('uploadResume')
-        resume_context = self._parse_resume(resume_path)
+        resume_data = self._parse_resume(resume_path) # Returns dict now
+        resume_summary = resume_data.get("summary", "") if isinstance(resume_data, dict) else ""
+        
+        # Scrape LinkedIn
+        linkedin_url = row.get('linkedinUrl')
+        scraped_li_data = self._scrape_linkedin(linkedin_url)
+        
+        # Cross Verification
+        form_data_for_verifier = {
+            "education_school": row.get('education.degreeFields1') or row.get('education.pleaseSpecify'),
+            "current_role": row.get('editGrid.whatIsYourRoleInTheCompany'),
+            "startup_name": row.get('editGrid.whatIsTheNameOfTheCompany'),
+            "projects": row.get('listTheThingsYouveBuiltAppsToolsWebsitesOpenSourceProjectsAddUrLsIfPossibleIfSeveralSeparateWithSemicolons', '')
+        }
+        
+        verifier = CrossVerifier(form_data_for_verifier, scraped_li_data, resume_data if isinstance(resume_data, dict) else {})
+        verification_report = verifier.verify()
+        grades['Verification'] = verification_report
         
         # Community
         comm_context = f"""
@@ -307,7 +381,7 @@ class Grader:
         Experience: {row.get('tellYouALittleBitMoreAboutYouThen200Words', '')}
         Contributions: {row.get('whyWouldYouLikeToJoinEuroTechFederationAsAFellowWhatCouldYouContributeToTheCommunity', '')}
         GitHub Bio: {scraped_gh_data.get('bio', '') if scraped_gh_data else ''}
-        Resume: {resume_context}
+        Resume: {resume_summary}
         """
         grades['Community'] = self._get_ollama_grade('Community', comm_context)
         
@@ -321,7 +395,7 @@ class Grader:
         {gh_context}
         
         RESUME:
-        {resume_context}
+        {resume_summary}
         """
         grades['Hack/Project'] = self._get_ollama_grade('Hack/Personal Project', hack_context)
         
@@ -332,7 +406,7 @@ class Grader:
         SCRAPED GITHUB DATA (May contain research code):
         {gh_context}
         RESUME:
-        {resume_context}
+        {resume_summary}
         """
         grades['Research'] = self._get_ollama_grade('Research', res_context)
         
@@ -351,10 +425,16 @@ class Grader:
         Extra Info: {extra_info}
         Website: {scraped_gh_data.get('blog', '') if scraped_gh_data else ''}
         {funding_signal}
+        TRUST SCORE: {verification_report['trust_score']}
+        DISCREPANCIES: {verification_report['discrepancies']}
         """
         grades['Startup'] = self._get_ollama_grade('Startup', start_context)
         
         return grades
+
+    def __del__(self):
+        if self.driver:
+            self.driver.quit()
 
 if __name__ == "__main__":
     # Test on one row

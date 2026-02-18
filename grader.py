@@ -5,6 +5,7 @@ from ollama_wrapper import OllamaClient
 from GitHubScraper import GitHubScraper
 from verifier.parser import ResumeParser
 from verifier.cross_verifier import CrossVerifier
+from website_scraper import WebsiteScraper
 from LinkedInScraper import LinkedinScraper
 from scraper import get_selenium_drivers
 import statistics
@@ -352,13 +353,33 @@ class Grader:
             gh_context += f"Top Repositories:\n"
             for repo in scraped_gh_data.get('repos', [])[:5]:
                 gh_context += f"- {repo['name']}: {repo.get('description', '')} (Stars: {repo.get('stars')})\n  Analysis: {repo.get('llm_review', 'N/A')}\n"
-        
-        # Parse Resume
+
+        # Scrape personal website
+        website_url = (
+            (scraped_gh_data.get('blog', '') if scraped_gh_data else '')
+            or row.get('personalWebsite', '')
+        )
+        website_data = {}
+        if website_url and isinstance(website_url, str) and website_url.startswith("http"):
+            print(f"   [Website] Scraping {website_url}...")
+            website_data = WebsiteScraper().scrape(website_url)
+            if website_data.get("error"):
+                print(f"   [Website] {website_data['error']}")
+
         # Parse Resume
         resume_path = row.get('uploadResume')
-        resume_data = self._parse_resume(resume_path) # Returns dict now
+        resume_data = self._parse_resume(resume_path)  # Returns dict now
         resume_summary = resume_data.get("summary", "") if isinstance(resume_data, dict) else ""
-        
+
+        # If website URL not found from GitHub bio, try resume links
+        if not website_url and isinstance(resume_data, dict):
+            resume_website = resume_data.get("links", {}).get("website", "")
+            if resume_website and resume_website.startswith("http"):
+                print(f"   [Website] Scraping {resume_website} (from resume)...")
+                website_data = WebsiteScraper().scrape(resume_website)
+                if website_data.get("error"):
+                    print(f"   [Website] {website_data['error']}")
+
         # Scrape LinkedIn
         linkedin_url = row.get('linkedinUrl')
         scraped_li_data = self._scrape_linkedin(linkedin_url)
@@ -423,7 +444,8 @@ class Grader:
         Role: {row.get('editGrid.whatIsYourRoleInTheCompany', '')}
         Desc: {row.get('editGrid.describeYourStartupIn23Sentences', '')}
         Extra Info: {extra_info}
-        Website: {scraped_gh_data.get('blog', '') if scraped_gh_data else ''}
+        Website URL: {scraped_gh_data.get('blog', '') if scraped_gh_data else ''}
+        Website Content: {website_data.get('raw_text', '')[:400] if website_data else ''}
         {funding_signal}
         TRUST SCORE: {verification_report['trust_score']}
         DISCREPANCIES: {verification_report['discrepancies']}

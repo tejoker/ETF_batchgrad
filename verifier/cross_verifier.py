@@ -103,6 +103,14 @@ class CrossVerifier:
                 self.discrepancies.append(f"WARNING: Startup '{startup_name}' not found in LinkedIn experience OR Resume.")
                 self.trust_score -= 15
 
+    def get_employer_locations(self) -> list:
+        """Return list of location strings from LinkedIn experience entries."""
+        return [
+            exp.get("location", "")
+            for exp in self.linkedin.get("experience", [])
+            if exp.get("location")
+        ]
+
     def _check_projects(self):
         """Check if 'built' things appear in GitHub or Resume."""
         projects_text = self.form.get("projects", "")

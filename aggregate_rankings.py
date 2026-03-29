@@ -8,19 +8,55 @@ INPUT_QS = 'qs-world-rankings-2025.csv'
 INPUT_THE = 'rankings/THE_2024.csv'
 OUTPUT_FILE = 'average_ranking.csv'
 
+import unicodedata
+
 def normalize_name(name):
     """
     Normalizes university names for matching.
     """
     if not name:
         return ""
+    
+    # Remove accents
+    name = unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode('utf-8')
     name = name.lower()
+    name = name.replace('&', ' and ')
     # Remove text in parentheses (often acronyms or locations)
     name = re.sub(r'\(.*?\)', '', name)
+    name = name.replace('-', ' ')
     # Replace non-alphanumeric with spaces
     name = re.sub(r'[^a-z0-9]', ' ', name)
-    # Collapse multiple spaces
-    name = ' '.join(name.split())
+    
+    words = name.split()
+    stop_words = {'the', 'of', 'and', 'in', 'at', 'for', 'di', 'de', 'suny'}
+    words = [w for w in words if w not in stop_words]
+    name = ' '.join(words)
+    
+    name = name.replace('universite', 'university')
+    
+    # Specific known merged names
+    if 'epfl' in name or 'ecole polytechnique federale lausanne' in name or 'swiss federal institute technology lausanne' in name:
+        name = 'epfl'
+    elif name == 'ucl' or 'university college london' in name:
+        name = 'university college london'
+    elif 'eth zurich' in name or 'swiss federal institute technology zurich' in name:
+        name = 'eth zurich'
+    elif 'kth' in name or 'royal institute technology' in name:
+        name = 'kth royal institute technology'
+    elif 'nanyang technological' in name:
+        name = 'nanyang technological university'
+    elif 'psl' in name or 'paris sciences et lettres' in name:
+        name = 'psl university'
+    elif 'paris saclay' in name:
+        name = 'paris saclay university'
+    elif ('goethe' in name and 'frankfurt' in name) or name == 'goethe university frankfurt am main':
+        name = 'goethe university frankfurt'
+    elif 'humboldt' in name and 'berlin' in name:
+        name = 'humboldt university berlin'
+    
+    name = name.replace('kit karlsruhe institute technology', 'karlsruhe institute technology')
+    name = name.replace('ntnu norwegian university science technology', 'norwegian university science technology')
+    
     return name.strip()
 
 def clean_rank(rank_str):

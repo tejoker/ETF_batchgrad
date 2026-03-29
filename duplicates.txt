@@ -1,0 +1,200 @@
+Anhui Agricultural University (1) | Anhui University (1) | 0.67
+Anhui Medical University (1) | Anhui University (1) | 0.67
+Anhui Normal University (1) | Anhui University (1) | 0.67
+Beijing University of Chemical Technology (2) | Beijing University of Technology (2) | 0.80
+Beijing University of Posts and Telecommunications (2) | Chongqing University of Posts and Telecommunications (1) | 0.71
+Binghamton University (1) | Binghamton University SUNY (1) | 0.67
+Charles Darwin University  (1) | Charles University (2) | 0.67
+Charles Sturt University  (1) | Charles University (2) | 0.67
+China University of Geosciences (2) | China University of Geosciences Beijing (1) | 0.80
+China University of Geosciences Beijing (1) | China University of Petroleum, Beijing (1) | 0.67
+China University of Mining and Technology (2) | China University of Mining and Technology-Beijing (1) | 0.71
+China University of Mining and Technology (2) | East China University of Science and Technology (2) | 0.62
+Chinese University of Hong Kong (1) | City University of Hong Kong (3) | 0.67
+Chongqing Medical University (1) | Chongqing University (2) | 0.67
+Comenius University Bratislava (1) | Comenius University in Bratislava (1) | 0.75
+Czech University of Life Sciences Prague (1) | Czech University of Life Sciences in Prague (1) | 0.86
+Federal University of Santa Catarina (1) | Federal University of Santa Maria (1) | 0.67
+Federal University of Sao Carlos (1) | Federal University of Sao Paulo (1) | 0.67
+Guangxi Medical University (1) | Guangxi University (1) | 0.67
+Guangxi Normal University (1) | Guangxi University (1) | 0.67
+Guangzhou Medical University (1) | Guangzhou University (1) | 0.67
+Hainan Medical University (1) | Hainan University (1) | 0.67
+Hanoi University of Science and Technology (1) | Henan University of Science and Technology (1) | 0.71
+Hanoi University of Science and Technology (1) | Huazhong University of Science and Technology (3) | 0.71
+Hanoi University of Science and Technology (1) | Iran University of Science and Technology (1) | 0.71
+Hebei Medical University (1) | Hebei University (1) | 0.67
+Hebei Normal University (1) | Hebei University (1) | 0.67
+Henan Agricultural University (1) | Henan University (1) | 0.67
+Henan Normal University (1) | Henan University (1) | 0.67
+Henan Polytechnic University (1) | Henan University (1) | 0.67
+Henan University of Science and Technology (1) | Huazhong University of Science and Technology (3) | 0.71
+Henan University of Science and Technology (1) | Iran University of Science and Technology (1) | 0.71
+Henan University of Science and Technology (1) | Jiangsu University of Science and Technology (1) | 0.71
+Huazhong University of Science and Technology (3) | Iran University of Science and Technology (1) | 0.71
+Huazhong University of Science and Technology (3) | Jiangsu University of Science and Technology (1) | 0.71
+Hunan Agricultural University (1) | Hunan University  (2) | 0.67
+Hunan Normal University (1) | Hunan University  (2) | 0.67
+Indian Institute of Technology Bhubaneswar (1) | Indian Institute of Technology Hyderabad (1) | 0.67
+Indiana State University (1) | Indiana University (1) | 0.67
+Indiana University (1) | Indiana University Bloomington (2) | 0.67
+Iran University of Science and Technology (1) | Jiangsu University of Science and Technology (1) | 0.71
+Iran University of Science and Technology (1) | Khalifa University of Science and Technology (1) | 0.71
+Iran University of Science and Technology (1) | King Abdullah University of Science and Technology (1) | 0.62
+Iran University of Science and Technology (1) | Kunming University of Science and Technology (1) | 0.71
+Iran University of Science and Technology (1) | Kwame Nkrumah University of Science and Technology (1) | 0.62
+Istanbul Aydin University   (1) | Istanbul University (2) | 0.67
+Istanbul Technical University (2) | Istanbul University (2) | 0.67
+Istanbul University (2) | Istanbul University Cerrahpasa (1) | 0.67
+Jiangsu University of Science and Technology (1) | Khalifa University of Science and Technology (1) | 0.71
+Jiangsu University of Science and Technology (1) | King Abdullah University of Science and Technology (1) | 0.62
+Jiangsu University of Science and Technology (1) | Kunming University of Science and Technology (1) | 0.71
+Jiangsu University of Science and Technology (1) | Kwame Nkrumah University of Science and Technology (1) | 0.62
+Jilin Agricultural University (1) | Jilin University (2) | 0.67
+KIT, Karlsruhe Institute of Technology (1) | Karlsruhe Institute of Technology (2) | 0.80
+Khalifa University of Science and Technology (1) | King Abdullah University of Science and Technology (1) | 0.62
+Khalifa University of Science and Technology (1) | Kunming University of Science and Technology (1) | 0.71
+Khalifa University of Science and Technology (1) | Kwame Nkrumah University of Science and Technology (1) | 0.62
+Khalifa University of Science and Technology (1) | Macau University of Science and Technology (2) | 0.71
+King Abdullah University of Science and Technology (1) | Kunming University of Science and Technology (1) | 0.62
+King Abdullah University of Science and Technology (1) | Macau University of Science and Technology (2) | 0.62
+King Fahd University of Petroleum & Minerals (1) | King Fahd University of Petroleum and Minerals (1) | 0.75
+King Mongkut's University of Technology North Bangkok (1) | King Mongkut's University of Technology Thonburi  (1) | 0.62
+Kunming University of Science and Technology (1) | Kwame Nkrumah University of Science and Technology (1) | 0.62
+Kunming University of Science and Technology (1) | Macau University of Science and Technology (2) | 0.71
+Kunming University of Science and Technology (1) | Missouri University of Science and Technology (1) | 0.71
+Kwame Nkrumah University of Science and Technology (1) | Macau University of Science and Technology (2) | 0.62
+Kwame Nkrumah University of Science and Technology (1) | Missouri University of Science and Technology (1) | 0.62
+Lebanese American University (2) | Lebanese University (1) | 0.67
+Lomonosov Moscow State University (2) | Moscow State University (1) | 0.75
+Macau University of Science and Technology (2) | Missouri University of Science and Technology (1) | 0.71
+Macau University of Science and Technology (2) | Nanjing University of Science and Technology (1) | 0.71
+Missouri University of Science and Technology (1) | Nanjing University of Science and Technology (1) | 0.71
+Moscow Pedagogical State University (1) | Moscow State University (1) | 0.75
+NTNU - Norwegian University of Science and Technology (1) | Norwegian University of Science And Technology (1) | 0.75
+Nanjing Agricultural University (2) | Nanjing University (3) | 0.67
+Nanjing Forestry University (1) | Nanjing University (3) | 0.67
+Nanjing Medical University (1) | Nanjing University (3) | 0.67
+Nanjing Normal University (2) | Nanjing University (3) | 0.67
+Nanjing Tech University (1) | Nanjing University (3) | 0.67
+Nanjing University of Information Science & Technology (1) | Nanjing University of Science & Technology (1) | 0.86
+Nanjing University of Information Science & Technology (1) | Nanjing University of Science and Technology (1) | 0.62
+Nanjing University of Science & Technology (1) | Nanjing University of Science and Technology (1) | 0.71
+Nanjing University of Science and Technology (1) | Norwegian University of Science And Technology (1) | 0.71
+National Research Saratov State University (1) | Perm State National Research University (1) | 0.67
+National Taipei University of Technology (1) | National University of Defense Technology (1) | 0.67
+North Carolina State University (1) | North Carolina State University at Raleigh (1) | 0.67
+Northwestern Polytechnical University (2) | Northwestern University (3) | 0.67
+Norwegian University of Science And Technology (1) | Pohang University of Science And Technology (POSTECH) (3) | 0.62
+Novosibirsk State Technical University (1) | Novosibirsk State University (2) | 0.75
+Osaka Metropolitan University (2) | Osaka University (3) | 0.67
+Qingdao Agricultural University (1) | Qingdao University (1) | 0.67
+Qingdao University of Science & Technology (1) | Shaanxi University of Science & Technology (1) | 0.71
+Queen's University (1) | Queen's University Belfast (2) | 0.67
+Radboud University  (1) | Radboud University Nijmegen (2) | 0.67
+SRM INSTITUTE OF SCIENCE AND TECHNOLOGY (1) | SRM Institute of Science & Technology (1) | 0.71
+SRM INSTITUTE OF SCIENCE AND TECHNOLOGY (1) | Skolkovo Institute of Science and Technology (1) | 0.71
+Scuola Normale Superiore - Pisa (1) | Scuola Normale Superiore di Pisa (1) | 0.67
+Seoul National University of Science and Technology (1) | Shahjalal University of Science and Technology (1) | 0.62
+Seoul National University of Science and Technology (1) | Shandong University of Science and Technology (1) | 0.62
+Seoul National University of Science and Technology (1) | Southern University of Science and Technology (2) | 0.62
+Seoul National University of Science and Technology (1) | Southwest University of Science and Technology (1) | 0.62
+Seoul National University of Science and Technology (1) | Suzhou University of Science and Technology (1) | 0.62
+Shahjalal University of Science and Technology (1) | Shandong University of Science and Technology (1) | 0.71
+Shahjalal University of Science and Technology (1) | Southern University of Science and Technology (2) | 0.71
+Shahjalal University of Science and Technology (1) | Southwest University of Science and Technology (1) | 0.71
+Shahjalal University of Science and Technology (1) | Suzhou University of Science and Technology (1) | 0.71
+Shandong Agricultural University (1) | Shandong University (2) | 0.67
+Shandong Normal University (1) | Shandong University (2) | 0.67
+Shandong University of Science and Technology (1) | Shandong University of Technology (1) | 0.67
+Shandong University of Science and Technology (1) | Southern University of Science and Technology (2) | 0.71
+Shandong University of Science and Technology (1) | Southwest University of Science and Technology (1) | 0.71
+Shandong University of Science and Technology (1) | Suzhou University of Science and Technology (1) | 0.71
+Shandong University of Science and Technology (1) | Taiyuan University of Science and Technology (1) | 0.71
+Shanghai Normal University (2) | Shanghai University (2) | 0.67
+Shanghai Ocean University (1) | Shanghai University (2) | 0.67
+Shanghai University of Finance and Economics (2) | Southwestern University of Finance and Economics (1) | 0.71
+Shanxi Medical University (1) | Shanxi University (1) | 0.67
+Sichuan Agricultural University (1) | Sichuan University (3) | 0.67
+Southern University of Science and Technology (2) | Southwest University of Science and Technology (1) | 0.71
+Southern University of Science and Technology (2) | Suzhou University of Science and Technology (1) | 0.71
+Southern University of Science and Technology (2) | Taiyuan University of Science and Technology (1) | 0.71
+Southwest Jiaotong University (1) | Southwest University (2) | 0.67
+Southwest Medical University (1) | Southwest University (2) | 0.67
+Southwest Petroleum University (1) | Southwest University (2) | 0.67
+Southwest University of Science and Technology (1) | Suzhou University of Science and Technology (1) | 0.71
+Southwest University of Science and Technology (1) | Taiyuan University of Science and Technology (1) | 0.71
+Suzhou University of Science and Technology (1) | Taiyuan University of Science and Technology (1) | 0.71
+Taiyuan University of Science and Technology (1) | Taiyuan University of Technology (1) | 0.67
+Technical University Darmstadt (1) | Technical University of Darmstadt (1) | 0.75
+The Chinese University of Hong Kong (CUHK) (2) | The Education University of Hong Kong (1) | 0.62
+The Chinese University of Hong Kong (CUHK) (2) | The University of Hong Kong (2) | 0.71
+The Education University of Hong Kong (1) | The University of Hong Kong (2) | 0.83
+The Hong Kong Polytechnic University (2) | The University of Hong Kong (2) | 0.67
+The Hong Kong University of Science and Technology (3) | The University of Hong Kong (2) | 0.62
+The University of Texas Health Science Center at Houston (1) | The University of Texas Health Science Center at San Antonio (1) | 0.73
+The University of Texas Health Science Center at San Antonio (1) | The University of Texas at San Antonio (1) | 0.70
+The University of Texas at Arlington (2) | The University of Texas at Austin (1) | 0.71
+The University of Texas at Arlington (2) | The University of Texas at Dallas (1) | 0.71
+The University of Texas at Arlington (2) | The University of Texas at El Paso (1) | 0.62
+The University of Texas at Arlington (2) | The University of Texas at San Antonio (1) | 0.62
+The University of Texas at Austin (1) | The University of Texas at Dallas (1) | 0.71
+The University of Texas at Austin (1) | The University of Texas at El Paso (1) | 0.62
+The University of Texas at Austin (1) | The University of Texas at San Antonio (1) | 0.62
+The University of Texas at Dallas (1) | The University of Texas at El Paso (1) | 0.62
+The University of Texas at Dallas (1) | The University of Texas at San Antonio (1) | 0.62
+Tianjin Medical University (1) | Tianjin University (2) | 0.67
+Universidad Austral de Chile (1) | Universidad de Chile (1) | 0.75
+Universidad Autónoma de Chile (1) | Universidad de Chile (1) | 0.75
+Universidad Central de Chile (1) | Universidad de Chile (1) | 0.75
+Universidad de Córdoba - Colombia (1) | Universidad de Córdoba - España (1) | 0.67
+Universidad de Los Andes - (ULA) Mérida (1) | Universidad de los Andes - Chile (1) | 0.62
+Universidad de los Andes (1) | Universidad de los Andes - Chile (1) | 0.67
+Universidade Federal de Santa Catarina  (1) | Universidade Federal de Santa Maria (1) | 0.67
+Universidade Federal de São Paulo (1) | Universidade de São Paulo (1) | 0.80
+Universidade Federal do Estado do Rio de Janeiro - UNIRIO (1) | Universidade Federal do Rio de Janeiro (1) | 0.67
+Universidade Federal do Rio Grande Do Norte (1) | Universidade Federal do Rio Grande Do Sul  (1) | 0.71
+Universidade Federal do Rio de Janeiro (1) | Universidade do Estado do Rio de Janeiro (UERJ) (1) | 0.62
+Universitas Indonesia (1) | Universitas Islam Indonesia (1) | 0.67
+Universitas Indonesia (1) | Universitas Pendidikan Indonesia (1) | 0.67
+Universitat Autònoma de Barcelona (1) | Universitat de Barcelona (1) | 0.75
+University POLITEHNICA of Bucharest (1) | University of Bucharest (1) | 0.75
+University at Albany (1) | University at Albany SUNY (1) | 0.75
+University of Alabama, Birmingham (1) | University of Birmingham (3) | 0.75
+University of Arkansas Fayetteville  (1) | University of Arkansas at Fayetteville (1) | 0.80
+University of Central Florida (2) | University of Florida (3) | 0.75
+University of Chicago (2) | University of Illinois Chicago (1) | 0.75
+University of Colorado, Denver  (1) | University of Denver (1) | 0.75
+University of Illinois Chicago (1) | University of Illinois at Chicago (UIC) (1) | 0.67
+University of Maryland, Baltimore (1) | University of Maryland, Baltimore County (2) | 0.80
+University of Massachusetts (1) | University of Massachusetts Amherst (2) | 0.75
+University of Massachusetts (1) | University of Massachusetts Boston (1) | 0.75
+University of Montreal (2) | University of Quebec Montreal (1) | 0.75
+University of North Carolina at Chapel Hill (2) | University of North Carolina at Charlotte (1) | 0.62
+University of North Carolina at Chapel Hill (2) | University of North Carolina at Greensboro (1) | 0.62
+University of North Carolina at Chapel Hill (2) | University of North Carolina, Chapel Hill (1) | 0.62
+University of North Carolina at Charlotte (1) | University of North Carolina at Greensboro (1) | 0.71
+University of Science and Technology Beijing (2) | University of Science and Technology of China (3) | 0.71
+University of Science and Technology Beijing (2) | University of Shanghai for Science and Technology (1) | 0.62
+University of Science and Technology of China (3) | University of Shanghai for Science and Technology (1) | 0.62
+University of Sydney (1) | University of Technology Sydney (3) | 0.75
+University of Witwatersrand (1) | University of the Witwatersrand (1) | 0.75
+Università degli Studi di Pavia (1) | Università degli Studi di Perugia (1) | 0.67
+Università degli Studi di Pavia (1) | Università degli Studi di Udine (1) | 0.67
+Università degli Studi di Pavia (1) | Università degli studi di Bergamo (1) | 0.67
+Università degli Studi di Perugia (1) | Università degli Studi di Udine (1) | 0.67
+Università degli Studi di Perugia (1) | Università degli studi di Bergamo (1) | 0.67
+Università degli Studi di Udine (1) | Università degli studi di Bergamo (1) | 0.67
+Wenzhou Medical University (1) | Wenzhou University (1) | 0.67
+Western Michigan University (1) | Western University (2) | 0.67
+Western University (2) | Western Washington University (1) | 0.67
+Wroclaw University of Science and Technology (WRUST) (2) | Wuhan University of Science and Technology (1) | 0.62
+Wroclaw University of Science and Technology (WRUST) (2) | Xi'an University of Science and Technology (1) | 0.62
+Wuhan University of Science and Technology (1) | Wuhan University of Technology (2) | 0.67
+Wuhan University of Science and Technology (1) | Xi'an University of Science and Technology (1) | 0.71
+Xi'an University of Architecture and Technology (1) | Xi'an University of Science and Technology (1) | 0.71
+Xi'an University of Architecture and Technology (1) | Xi'an University of Technology (1) | 0.67
+Xi'an University of Science and Technology (1) | Xi'an University of Technology (1) | 0.67
+Zhejiang A&F University (1) | Zhejiang University (3) | 0.67
+Zhejiang Normal University (1) | Zhejiang University (3) | 0.67
+Zhejiang Sci-Tech University (1) | Zhejiang University (3) | 0.67
